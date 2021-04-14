@@ -1,0 +1,59 @@
+/* table{
+    display: inline-block;
+    width: 50%;
+    max-height: 100%;
+    border: 1px black solid;
+}
+
+td{
+    border: 1px black solid;
+}
+
+#td11{
+    display: inline-block;
+    column-span: 2;
+    width: 66.6%;
+    height: 33.3%;
+    background-color: red;
+}
+
+#td12{
+    display: inline-block;
+    width: 33.3%;
+    height: 66.6%;
+    background-color: orange;
+} */
+
+
+/* rowspan="2" width="33.3%" height="66.6%"
+
+width="33.3%" height="33.3%"
+
+colspan="2" width="66.6%" height="33.3%" */
+
+
+
+
+.red{
+    color: red;
+}
+
+.center{
+    text-align: left;
+    text-indent: 100px;
+    /* EM : 웹에서 다른 사이즤의 화면크기를 맞춰주기 위해 약속한 크기단위 */
+}
+
+span{
+    display: inline-block;
+    width:100%;
+    text-transform: lowercase;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-style: initial;
+    /* 부모의 것을 안받고 초기화 시켜줘 */
+    font-style: inherit;
+    /* 부모의 것을 상속해줘 */
+    font-size: 50px;
+
+    line-height: 100px;
+}
