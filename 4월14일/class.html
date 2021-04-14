@@ -17,63 +17,44 @@ class="span_class"name="span_name3"id="span33">text3</span> </div> </body>
 <html>
     <head>
         <title>Class 연습</title>
-        <style>
-            body {
-                background-color: orange;
-            }
-            /* 이때 body가 셀렉터임  */
-            #span22 {
-                background-color: gold;
-            }
-            /* 이때 span가 셀렉터임. ID 선택함  */
-            .span_class {
-                background-color: brown;
-            
-                display: inline-block;
-                width: 100px;
-                height: 100px;
-            /* 크기등을 변경하려면 필요함 / display:css 개발자가 제일 많이 쓰는 코드. inline-block:화면에서 내가지정한 만큼만 보여줘/none:보여주지마/block(또는 안쓰기) */
-            }
-            #span53 {
-                display: none;
-            
-            }
-        </style>
-    </head>
-    <body>
-        <div style="background-color: #f00;" class="div_class" id="div1">
-            <!-- 인라인 속성 -->
-            <span
-                class="span_class"
-                name="span_name1"
-                style="background-color: #00ff00;"
-                id="span11">text1</span>
-            <span class="span_class" name="span_name1" id="span12">text2</span>
-            <span class="span_class" name="span_name1" id="span13">text3</span>
-        </div>
+        <link rel="stylesheet" href="style.css" type="text/css"></head>
 
-        <div style="background-color: #0000ff;" class="div_class" id="div2">
-            <span class="span_class" name="span_name2" id="span21">text1</span>
-            <span class="span_class" name="span_name2" id="span22">text2</span>
-            <span class="span_class" name="span_name2" id="span23">text3</span>
-        </div>
+        <!-- 옵션의 사용 순서는 상관없다 -->
+        <body>
+            <div style="background-color: #f00;" class="div_class" id="div1">
+                <!-- 클래스에 1개가 아닌 다수를 쓸 수 있음 -->
+                <!-- 인라인 추가방식 -->
+                <span
+                    class="span_class"
+                    name="span_name1"
+                    style="background-color: #00ff00;"
+                    id="span11">text1</span>
+                <span class="span_class" name="span_name1" id="span12">text2</span>
+                <span class="span_class" name="span_name1" id="span13">text3</span>
+            </div>
 
-        <div class="div_class" id="div3">
-            <span class="span_class" name="span_name3" id="span31">text1</span>
-            <span class="span_class" name="span_name3" id="span32">text2</span>
-            <span class="span_class" name="span_name3" id="span33">text3</span>
-        </div>
+            <div style="background-color: #0000ff;" class="div_class" id="div2">
+                <span class="span_class" name="span_name2" id="span21">text1</span>
+                <span class="span_class " name="span_name2" id="span22">text2</span>
+                <span class="span_class " name="span_name2" id="span23">text3</span>
+            </div>
 
-        <div class="div_class" id="div4">
-            <span class="span_class" name="span_name4" id="span41">text1</span>
-            <span class="span_class" name="span_name4" id="span42">text2</span>
-            <span class="span_class" name="span_name4" id="span43">text3</span>
-        </div>
+            <div class="div_class" id="div3">
+                <span class="span_class1" name="span_name3" id="span31">text1</span>
+                <span class="span_class2" name="span_name3" id="span32">text2</span>
+                <span class="span_class3" name="span_name3" id="span33">text3</span>
+            </div>
 
-        <div class="div_class" id="div5">
-            <span class="span_class" name="span_name5" id="span51">text1</span>
-            <span class="span_class" name="span_name5" id="span52">text2</span>
-            <span class="span_class" name="span_name5" id="span53">text3</span>
-        </div>
-    </body>
-</html>
+            <div class="div_class" id="div4">
+                <span class="span_class1" name="span_name4" id="span41">text1</span>
+                <span class="span_class2" name="span_name4" id="span42">text2</span>
+                <span class="span_class3" name="span_name4" id="span43">text3</span>
+            </div>
+
+            <div class="div_class" id="div5">
+                <span class="span_class" name="span_name5" id="span51">text1</span>
+                <span class="span_class" name="span_name5" id="span52">text2</span>
+                <span class="span_class" name="span_name5" id="span53">text3</span>
+            </div>
+        </body>
+    </html>

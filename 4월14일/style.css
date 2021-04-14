@@ -1,0 +1,45 @@
+/* 내부선언방식 */
+body {
+    background-color: orange;
+}
+/* 이때 body가 셀렉터임  */
+
+#span22 {
+    background-color: gold;
+}
+/* 이때 span가 셀렉터임. ID 선택함  */
+
+.span_class {
+    background-color: brown;
+
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /* 크기등을 변경하려면 필요함 / display:css 개발자가 제일 많이 쓰는 코드. inline-block:화면에서 내가지정한 만큼만 보여줘/none:보여주지마/block(또는 안쓰기) */
+}
+
+.span_class1, .span_class2, .span_class3 {
+    background-color: brown;
+
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.hide {
+    display: none;
+}
+
+#span51, #span52
+/* css id 선택자 검색->  */
+{
+    background-color: #ffffff;
+}
+
+#div3{
+    background-color: black;
+}
+
+span{
+    background-color: white !important;
+    /* 이게 젤 중요해 이걸 무조건 우선순위로 적용시켜줘 */
+}
