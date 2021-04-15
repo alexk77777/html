@@ -1,0 +1,69 @@
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('은하수.jpg');
+    background-size: cover;
+    margin: 0px;
+}
+
+div {
+    display: inline-block;
+    /* border: 1px black solid; */
+}
+
+
+#appbar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #333131;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    /* text-indent: 10px; */
+}
+
+#actionbutton {
+    position: absolute;
+    right: 0px;
+}
+
+.chld1{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+#readme {
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    /* line-height: 80px; */
+
+    top: 400px; 
+    left: 30%;
+    color: white;
+
+
+    /* width: 600px;
+    text-align: center;
+    height: 500px;
+    font-size: 20px;
+    color: black; */
+}
+
+span{
+    color: red;
+}
+
+#mywork{
+    position: relative;
+    left: 20%;
+    margin-top: 30px;
+    border: white solid 2px;
+    line-height: 80px;
+}

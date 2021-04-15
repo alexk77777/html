@@ -1,0 +1,68 @@
+div {
+    display: inline-block;
+}
+
+#grandmother {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: lightgray;
+    border: 1px black solid;
+}
+
+#father {
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    background-color: blue;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 100px;
+    text-indent: 10px;
+}
+
+#mother {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 600px;
+    height: 500px;
+    font-size: 20px;
+    color: black;
+}
+.chld{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
+
+#son1 {
+    top: 50px;
+    left: 100px;  
+}
+
+#son2 {
+    /* position: absolute; */
+    top: 200px;
+    left: 100px;
+    /* width: 400px;
+    height: 100px;
+    font-size: 20px;
+    background-color: white;
+    color: black; */
+}
+
+#son3 {
+    /* position: absolute; */
+    top: 350px;
+    left: 100px;
+    /* width: 400px;
+    height: 100px;
+    font-size: 20px;
+    background-color: white;
+    color: black; */
+}
