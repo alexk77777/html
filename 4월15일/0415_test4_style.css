@@ -1,29 +1,32 @@
+/* 홈페이지 첫화면 만들어보기 */
+
 body{
     position: relative;
     width: 100%;
     height: 100%;
     background-image: url('은하수.jpg');
     background-size: cover;
-    margin: 0px;
+    margin: 0px; /* 최고로 중요! 사이즈가 안맞을때 해야하는 작업!! */
+
 }
 
 div {
     display: inline-block;
-    /* border: 1px black solid; */
 }
 
 
 #appbar {
     position: absolute;
-    top: 0px;
+    /* top: 0px; */
     width: 100%;
     height: 40px;
+    /* 질문! 왜 height를 40%로 했을때 40% 사이즈가 안되는가? */
+
     background-color: #333131;
     line-height: 40px;
     font-size: 20px;
     color: white;
     font-weight: bold;
-    line-height: 40px;
     /* text-indent: 10px; */
 }
 
@@ -46,14 +49,9 @@ div {
 
     top: 400px; 
     left: 30%;
+    /* 질문! 위치 지정이 마음대로 안됨 */
+
     color: white;
-
-
-    /* width: 600px;
-    text-align: center;
-    height: 500px;
-    font-size: 20px;
-    color: black; */
 }
 
 span{
@@ -63,7 +61,11 @@ span{
 #mywork{
     position: relative;
     left: 20%;
+    /* 질문! 정중앙에 놓고 싶은데..어케? */
     margin-top: 30px;
     border: white solid 2px;
-    line-height: 80px;
+    line-height: 60px;
+    padding: 20px;
 }
+
+
