@@ -1,0 +1,46 @@
+div{
+    display: inline-block;
+    border: 1px black solid;
+    width: 100px;
+    height: 100px;
+}
+
+.right{
+    background-color: blue;
+    float: right;
+}
+
+.left{
+    background-color: red;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.img{
+    height: 500px;
+    
+    /* -webkit-filter: blur(10); */
+    /* -webkit-filter: brightness(2); */
+    
+    /* -webkit-filter: contrast(2);  */
+    /* contrast는 색의 단차(고대비 : 밝은 부분과 어두운 부분의 값의 차이를 줄이기) */
+
+
+    /* -webkit-filter: drop-shadow(50px 50px 10px red);  */
+
+
+    /* -webkit-filter: grayscale(5);  */
+    /* -webkit-filter: invert(20%);  */
+
+    /* -webkit-filter: opacity(0.5); */
+    /* -webkit-filter: sepia(10%);  */
+
+    /* filter: blur(10px); */
+    /* 브라우져 마다 적용되는게 다름 */
+
+
+
+}
