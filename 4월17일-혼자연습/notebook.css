@@ -2,20 +2,19 @@
     margin: 0;
 } */
 
-table {
+/* table {
     margin: 0;
     padding: 0;
-    /* position: relative; */
+    position: relative;
     width: 900px;
     height: 900px;
     border: 1px black solid;
-
 }
 td {
     margin: 0;
     padding: 0;
-    /* position: absolute; */
-    /* display: inline-block; */
+    position: absolute;
+    display: inline-block;
     border: 1px black solid;
 }
 .rowbar {
@@ -26,7 +25,7 @@ td {
 .colbar {
     width: 34%;
     height: 66%;
-}
+} */
 
 /* #no1 {
 
@@ -58,3 +57,26 @@ td {
     bottom: 0;
 
 }  */
+
+
+
+div {
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#wholebox{
+    width: 910px;
+    height: 910px;
+
+}
+
+.rowbar{
+    width: 600px;
+    height: 300px;
+}
+
+.colbar{
+    width: 300px;
+    height: 600px;
+}
