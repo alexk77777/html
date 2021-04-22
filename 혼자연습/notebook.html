@@ -5,6 +5,7 @@
 -> Doctype 안쓰려 했더니 무조건 쓰랜다 -.-;;
 3. doctype 없어도 3번 박스에 사진 넣으면 또 전체적으로 깨진다! 3번 박스에 %를 정해줘야했다!
 4. doctype 쓰고 table에 사이즈를 정해주기로 함. 3번 박스에도 사이즈를 줘야함
+5. DIV 작업할땐 position으로 위치 맞추고, border가 1px~1.11px씩 먹는다는 것을 잊지말자!
 
  -->
 
@@ -106,7 +107,8 @@
 
 
 
-<!DOCTYPE html >
+<!-- <!DOCTYPE html >
+5. DIV 작업할땐 position으로 위치 맞추고, border가 1px~1.11px씩 먹는다는 것을 잊지말자!
  <html>
     <head>
         <title>노트북</title>
@@ -122,4 +124,26 @@
                 
             </div>
         </body>
-    </html>
+    </html> -->
+
+<!Doctype html>
+<html>
+    <head>
+        <title>메세지창</title>
+        <link rel="stylesheet" href="notebook.css">
+    </head>
+    <body>
+        <div id="wholebox">
+            <div id="upper">최도근님 안녕하세요?</div>
+            <div id="insert">페이스북 색감</div>
+            <div id="lower">
+                <div class="small">박지성</div>
+                <div class="small">안정환</div>
+                <div class="small">이영표</div>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

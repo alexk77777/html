@@ -60,7 +60,7 @@ td {
 
 
 
-
+/* 
 #wholebox {
     width: 904.44px;
     height: 904.44px;
@@ -107,5 +107,52 @@ div {
     width: 297.78px;
     height: 297.78px;
     background-color: blue;
+} */
+
+div{
+    display: inline-block;
+    border: 0.1px solid black;
 }
 
+#wholebox{
+    width: 600px;
+    height: 900px;
+    background-color: lightgrey;
+    position: relative;
+}
+
+#upper{
+    width: 600px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#insert{
+    width: 600px;
+    height: 100px;
+}
+#lower{
+    position: absolute;
+    bottom: 0px;
+    width: 600px;
+    height: 680px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.small{
+    position: relative;
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    left:100px;
+    top: 50px;
+    margin-bottom: 30px;
+}
