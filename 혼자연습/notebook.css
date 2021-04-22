@@ -1,0 +1,116 @@
+/* body {
+    margin: 0;
+} */
+
+/* table {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 900px;
+    height: 900px;
+    border: 1px black solid;
+}
+td {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: inline-block;
+    border: 1px black solid;
+}
+.rowbar {
+    width: 66%;
+    height: 34%;
+}
+
+.colbar {
+    width: 34%;
+    height: 66%;
+} */
+
+/* #no1 {
+
+    left: 0;
+    top: 0;
+}
+
+#no2 {
+    right: 0;
+    top: 0;
+
+}
+
+#no3 {
+    left: 0;
+    bottom: 0;
+
+}
+/* 
+
+#no4 {
+    right: 0px;
+    top: 0px;
+
+} */
+
+/* #no5 {
+    right: 0;
+    bottom: 0;
+
+}  */
+
+
+
+
+#wholebox {
+    width: 904.44px;
+    height: 904.44px;
+    position: relative;
+}
+
+div {
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.rowbar {
+    width: 600px;
+
+    height: 300px;
+}
+
+.colbar {
+    height: 600px;
+    width: 300px;
+}
+
+#no1 {
+    position: absolute;
+    background-color: red;
+}
+
+#no2 {
+    position: absolute;
+    right: 0;
+    background: yellow;
+
+}
+#no3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+
+}
+#no4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: green;
+}
+
+#no5 {
+    position: relative;
+    right: 0;
+    background-color: blue;
+}
+
