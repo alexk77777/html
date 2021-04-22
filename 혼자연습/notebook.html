@@ -1,0 +1,125 @@
+<!-- table 연습
+1. td에는 border 가 안된다?!
+2. table에서 width는 %가 적용되는데 height에는 적용안된다.
+-> !!! <!DOCTYPE html>를 썼더니 height가 적용안되는 것이었다!!! 이게 뭐길래!!!
+-> Doctype 안쓰려 했더니 무조건 쓰랜다 -.-;;
+3. doctype 없어도 3번 박스에 사진 넣으면 또 전체적으로 깨진다! 3번 박스에 %를 정해줘야했다!
+4. doctype 쓰고 table에 사이즈를 정해주기로 함. 3번 박스에도 사이즈를 줘야함
+
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>노트북</title>
+    </head>
+    <body>
+        <table border="1" width=900px height=100% align="center">
+            <tr>
+                <td colspan="2" bgcolor="red" align="center">1</td>
+                <td rowspan="2" bgcolor="yellow">2</td>
+            </tr>
+            <tr>
+                <td rowspan="2" bgcolor="blue">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="violet">5</td>
+            </tr>
+        </table>
+    </body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>노트북</title>
+    </head>
+    <body>345
+        <table border="1" width=900px height=900px align="center">123
+            <tr>
+                <td class="rowbar" id="no1" colspan="2" bgcolor="red" align="center">1</td>
+                <td class="colbar" id="no2" rowspan="2" bgcolor="yellow">2</td>
+            </tr>
+            <tr>
+                <td class="colbar" id="no3" rowspan="2" bgcolor="blue">3</td>
+                <td class="img" id="no4">4</td>
+            </tr>
+            <tr>
+                <td class="rowbar" id="no5" colspan="2" bgcolor="violet">5</td>
+            </tr>
+        </table>
+    </body>
+</html> -->
+
+
+    <!-- div 이용방법
+박스 만들기
+    홈피 만들기 -->
+
+
+<!-- 3. doctype 없어도 3번 박스에 사진 넣으면 또 전체적으로 깨진다! 3번 박스에 %를 정해줘야했다!
+<html>
+<head><title>table 이용방법</title></head>
+<body>
+    <table border="1" width=50% height=100% align="center">
+        <tr>
+            <td colspan="2" >1</td>
+            <td rowspan="2" >2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">4</td>
+            <td align="center" width=33.333% height = 33.333%><img src="../image/1.jpg" ></td>
+        </tr>
+        <tr>
+            <td colspan="2" >3</td>
+        </tr>
+    </table>
+</body>
+</html> -->
+
+
+
+<!-- 4. doctype 쓰고 table에 사이즈를 정해주기로 함. 3번 박스에도 사이즈를 줘야함
+<!doctype html>
+<head><title>table 이용방법</title></head>
+<body>
+    <table border="1" width=900px height=900px align="center">
+        <tr>
+            <td colspan="2" >1</td>
+            <td rowspan="2" >2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">4</td>
+            <td align="center" width=33.333% height = 33.333%><img src="../image/1.jpg" ></td>
+        </tr>
+        <tr>
+            <td colspan="2" >3</td>
+        </tr>
+    </table>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html >
+ <html>
+    <head>
+        <title>노트북</title>
+        <link rel="stylesheet" href="notebook.css"></head>
+        <body>
+            <div id="wholebox">
+                <div class="rowbar" id="no1">1</div>
+                <div class="colbar" id="no2">2</div>
+                <div class="colbar" id="no4">4</div>
+                <div class="rowbar"id="no3">3</div>
+                
+                <div id="no5">5</div>
+                
+            </div>
+        </body>
+    </html>
