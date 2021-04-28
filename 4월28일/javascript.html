@@ -82,6 +82,7 @@
 
 
 // // <재귀호출 케이스>
+// 이름을 받고 이름이 아니면 입력해달라고 입력하면 안녕하세요 라고 하기
 //                      function namegetter(){
 //                         let conversation = prompt('이름을 입력해주세요 ');
 
@@ -96,6 +97,7 @@
 
 
 
+
 // // <for 구문>
 //                      for(var i=1;i<=100;i++){   // for(시작조건; 실행조건; 완료후 동작)
 //                          console.log(i);
@@ -103,37 +105,64 @@
 
 
 
-// <내가 짠 실습과제>
-                    function judgetnum(){
-                    var input = prompt('숫자를 입력해 주시와요');
-                    let checknumber = Number(input);
+// // <내가 짠 실습과제>
+// 숫자 아니면 다시 입력 | 100이상이면 다시 입력 | 100이면 1~100찍고 완료
 
-                    console.log(typeof checknumber);
+//                     function judgetnum(){
+//                     var input = prompt('숫자를 입력해 주시와요');
+//                     let checknumber = Number(input);
 
-                    if(isNaN(checknumber)){
-                        judgetnum();
-                    }
+//                     console.log(typeof checknumber);
 
-
-                    if(typeof checknumber !== typeof 1){
-                        alert('숫자를 입력해주세요');
-                        judgetnum();
-                    } 
-                    else if(checknumber>100 || checknumber <1)
-                     {
-                        alert('1이상 100이하를 넣어주세요');
-                        judgetnum();
-                    } 
-                    else
-                    {
-                        for(var i=1;i<=100;i++){ 
-                        console.log(i);}
-                        alert('완료되었습니다');
-                    }
-                }
+//                     if(isNaN(checknumber)){
+//                         judgetnum();
+//                     }
 
 
-judgetnum();
+//                     if(typeof checknumber !== typeof 1){
+//                         alert('숫자를 입력해주세요');
+//                         judgetnum();
+//                     } 
+//                     else if(checknumber>100 || checknumber <1)
+//                      {
+//                         alert('1이상 100이하를 넣어주세요');
+//                         judgetnum();
+//                     } 
+//                     else
+//                     {
+//                         for(var i=1;i<=100;i++){ 
+//                         console.log(i);}
+//                         alert('완료되었습니다');
+//                     }
+//                 }
+// judgetnum();
+
+
+
+// function getnumber()
+// {
+//     let input = prompt('숫자를 입력해주세요');
+//     let parsenumber = Number(input);
+//     if(isNaN(parsenumber))
+//     {
+//         getnumber();
+//     } else if(parsenumber<1 || parsenumber>100)
+//     {
+//         getnumber();
+//     } else 
+//     {
+//         for(var i =1;i<=100; i++)
+//         {
+//             console.log(i);
+//         }
+//         console.log('출력되었습니다');
+//     }
+// }
+
+// getnumber();
+
+
+
 
 
 
