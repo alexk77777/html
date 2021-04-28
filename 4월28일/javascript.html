@@ -81,18 +81,63 @@
             //          }
 
 
-// <재귀호출 케이스>
-                     function namegetter(){
-                        let conversation = prompt('이름을 입력해주세요 ');
+// // <재귀호출 케이스>
+//                      function namegetter(){
+//                         let conversation = prompt('이름을 입력해주세요 ');
 
-                        if(conversation != ''){
-                            alert(conversation + "님 안녕하세요");
-                        } else{
-                            namegetter();
-                        }   
-                     }
+//                         if(conversation != ''){
+//                             alert(conversation + "님 안녕하세요");
+//                         } else{
+//                             namegetter();
+//                         }   
+//                      }
 
-                     namegetter();
+//                      namegetter();
+
+
+
+// // <for 구문>
+//                      for(var i=1;i<=100;i++){   // for(시작조건; 실행조건; 완료후 동작)
+//                          console.log(i);
+//                      }
+
+
+
+// <내가 짠 실습과제>
+                    function judgetnum(){
+                    var input = prompt('숫자를 입력해 주시와요');
+                    let checknumber = Number(input);
+
+                    console.log(typeof checknumber);
+
+                    if(isNaN(checknumber)){
+                        judgetnum();
+                    }
+
+
+                    if(typeof checknumber !== typeof 1){
+                        alert('숫자를 입력해주세요');
+                        judgetnum();
+                    } 
+                    else if(checknumber>100 || checknumber <1)
+                     {
+                        alert('1이상 100이하를 넣어주세요');
+                        judgetnum();
+                    } 
+                    else
+                    {
+                        for(var i=1;i<=100;i++){ 
+                        console.log(i);}
+                        alert('완료되었습니다');
+                    }
+                }
+
+
+judgetnum();
+
+
+
+
 
         </script>
 
