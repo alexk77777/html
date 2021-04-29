@@ -1,0 +1,115 @@
+<!-- <HTML>
+    <head>
+        <title>
+            js
+        </title>
+        <style>
+            .off{
+                display: inline-block;
+                width : 200px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color: grey;
+                color: white;
+            }
+            .on{
+                border: 1px black solid;
+                background-color: white;
+                color: black;
+                display: inline-block;
+                width : 200px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="HTML" class="off" onclick="excution('HTML')">HTML</button>
+        <button id="CSS" class="off" onclick="excution('CSS')">CSS</button>
+        <button id="javascript" class="off" onclick="excution('javascript')">javascript</button>
+        <script>
+            function excution(text){
+            if(text=='HTML'){
+                document.getElementById('HTML').className='on';
+                document.getElementById('CSS').className='off';
+                document.getElementById('javascript').className='off';
+            }else if(text=='CSS'){
+                document.getElementById('HTML').className='off';
+                document.getElementById('CSS').className='on';
+                document.getElementById('javascript').className='off';
+            }else if(text=='javascript'){
+                document.getElementById('HTML').className='off';
+                document.getElementById('CSS').className='off';
+                document.getElementById('javascript').className='on';
+            }
+            }
+        </script>
+    </body>
+</HTML>
+ -->
+
+
+
+
+<!-- <쌤 버전> -->
+<HTML>
+    <head>
+        <title>
+            js
+        </title>
+        <style>
+            span{
+                display: inline-block;
+                width: 200px;
+                height: 80px;
+                text-align: center;
+                line-height: 80px;
+                border: 1px solid black;
+                position: relative;
+                margin-left: 10px;
+            }
+            .gray{
+                background-color: grey;
+                color: white;
+            }
+            .click{
+                background-color: white;
+                color: black;
+            }
+            .red{
+                background-color: red;
+                color: white;
+            }
+        </style>
+    </head>
+    <body onload="gray();">
+
+<!--         
+        <span id="btn1" onclick="clicker('btn1');">html</span>
+        <span id="btn2" onclick="clicker('btn2');">css</span>
+        <span id="btn3" onclick="clicker('btn3');">javascript</span> -->
+
+
+        <span id="btn1" onmouseover="clicker('btn1');" onclick="clicker2('btn1');">html</span>
+        <span id="btn2" onmouseover="clicker('btn2');" onclick="clicker2('btn2');">css</span>
+        <span id="btn3" onmouseover="clicker('btn3');" onclick="clicker2('btn3');">javascript</span>
+
+        <script>
+            function gray(){
+                document.getElementById("btn1").className="gray";
+                document.getElementById("btn2").className="gray";
+                document.getElementById("btn3").className="gray";
+            }
+            function clicker(str){
+                gray();
+                document.getElementById(str).className='click';
+            }
+            function clicker2(str){
+                gray();
+                document.getElementById(str).className='red';
+            }
+        </script>
+    </body>
+</HTML>
