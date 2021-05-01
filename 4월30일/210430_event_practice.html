@@ -1,0 +1,128 @@
+<!-- <html>
+    <head>
+        <title>jquery</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+
+
+    </style>
+    <body onload="color();" >
+
+        <button id="btn1">빨강</button>
+        <button id="btn2">파랑</button>
+        <button id="btn3">초록</button>
+        <div id="text1"></div>
+  
+
+        <script>
+            function color(){
+            let input = prompt('텍스트 값을 입력해주세요');
+
+            if (input ==""){
+                alert('텍스트 값을 입력해주세요');
+                color();
+            } else{
+                function text2() {
+                 $("text1").html("<b>html</b>");
+                }
+
+                text2();
+
+
+            }
+
+            function setcolor(color) {
+            if (color == "#FF0000") {
+                alert('빨간색으로 변경됩니다');
+            } else if (color == "#0000FF") {
+                alert('파란색으로 변경됩니다');
+            } else if (color == "#00FF00") {
+                alert('초록색으로 변경됩니다');
+            }
+            $("#div1").css("color","");
+            document.getElementById('text').style.color = color;
+        }
+          
+
+
+
+
+        }
+        </script>
+  
+
+        
+    </body>
+</html> -->
+
+
+
+
+<html >
+    <head>
+        <title>event_practice</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .view {
+            display: block;
+        }
+        
+    </style>
+    <body>
+
+        <div id="main">
+            <div id="text"></div>
+            <button id="red">빨강</button>
+            <button id="blue">파랑</button>
+            <button id="green">초록</button>
+        </div>
+
+        <script>
+            function gear(){
+
+                let input = prompt('텍스트를 입력해주세요');
+                console.log(input);
+
+                if (input != "") {
+                    $("#main").attr("class", "view");
+                    $("#text").css("textAlign","center");
+                    $("#text").css("line-height","800px");
+                    $("#text").css("font-size","100");
+                    $("#text").text(input);
+                }
+                else{
+                    gear();
+                }
+            }
+
+            $(function () {
+                $("#main").attr("class", "hidden");
+              
+                gear();
+
+                $("#red").on("click",function(){
+                    alert("붉은색으로 바뀝니다");
+                    $("#text").css("color","#FF0000");
+                });
+                
+                $("#blue").on("click",function(){
+                    alert("파란색으로 바뀝니다");
+                    $("#text").css("color","#0000FF");
+                });
+                
+                $("#green").on("click",function(){
+                    alert("초록색으로 바뀝니다");
+                    $("#text").css("color","#00FF00");
+                });
+            })
+
+        </script>
+
+    </body>
+</html>
