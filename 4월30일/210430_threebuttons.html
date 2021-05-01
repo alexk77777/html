@@ -1,0 +1,96 @@
+<!-- <html>
+    <head>
+        <title>three buttons</title>
+    </head>
+    <style>
+        button {
+            display: inline-block;
+            border: 1px black solid;
+            width: 100px;
+            height: 50px;
+        }
+
+        .grey {
+            background-color: grey;
+            color: white;
+        }
+
+        .white {
+            background-color: white;
+        }
+    </style>
+    <body>
+        <button id="btn1" class="grey">html</button>
+        <button id="btn2">css</button>
+        <button id="btn3">java</button>
+
+        <script>
+            $(function () {
+                $("#btn1").attr("class", "grey");
+
+             
+
+
+
+                $("#btn1").on("click", function () {
+
+                    $("#btn1").attr("class", "white");
+                });
+
+            })
+        </script>
+    </body>
+</html> -->
+
+
+<html>
+    <head>
+        <title>three buttons</title>
+    </head>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        button {
+            display: inline-block;
+            border: 1px black solid;
+            width: 100px;
+            height: 50px;
+        }
+
+        .grey {
+            background-color: grey;
+            color: white;
+        }
+
+        .white {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <body>
+        <button id="btn1">html</button>
+        <button id="btn2">css</button>
+        <button id="btn3">java</button>
+
+        <script>
+            $(function () {
+                $("button").attr("class", "grey");
+
+                $("#btn1").on("click", function () {
+                    $("button").attr("class", "grey");
+                    $(this).attr("class", "white");
+                });
+
+                $("#btn2").on("click", function () {
+                    $("button").attr("class", "grey");
+                    $(this).attr("class", "white");
+                });
+
+                $("#btn3").on("click", function () {
+                    $("button").attr("class", "grey");
+                    $(this).attr("class", "white");
+                });
+            });
+        </script>
+    </body>
+</html>

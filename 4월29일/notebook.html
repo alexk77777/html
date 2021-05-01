@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>notebook</title>
+        <style>
+            button
+            {
+                display: inline-block;
+                margin-left: 20px;
+                width: 200px;
+                height: 80px;
+                background-color: grey;
+                color: white;
+            }
+
+            .grey{
+                background-color: grey;
+                color: white;
+            }
+
+            .click{
+                background-color: white;
+                color: black;
+            }
+
+
+        </style>
+    </head>
+    <body onload="grey();">
+
+        <button class="init" id="button1" onclick="clickbutton('button1');">HTML</button>
+        <button class="init" id="button2" onclick="clickbutton('button2');">CSS</button>
+        <button class="init" id="button3" onclick="clickbutton('button3');">javascript</button>
+        <script>
+
+            function grey(){
+                // document.getElementById("button1").className="grey";
+                // document.getElementById("button2").className="grey";
+                // document.getElementById("button3").className="grey";
+document.getElementsByClassName("click")="grey";
+            }
+        
+            function clickbutton(abc)
+            {
+                grey();
+                document.getElementById(abc).className="click";
+            }
+        </script>
+    </body>
+</html>

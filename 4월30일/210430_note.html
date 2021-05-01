@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>jquery</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <body>
+        <button id="btn1">html</button>
+        <button id="btn2">text</button>
+
+        <div id="text"></div>
+
+        <script>
+
+            $(function () {
+                $("#btn1").on("click", function () {
+                 $("text").html("<b>html</b>");
+                });
+
+            
+                $("#btn2").on("click", function () {
+                 $("text").html("<b>text</b>");
+                });
+            });
+        </script>
+    </body>
+
+</html>
+
+
+<!-- 
+
+<html>
+    <head>
+        <title>jquery</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <body>
+        <button id="btn1">append</button>
+        <button id="btn2">prepend</button>
+
+        <div id="text">now</div>
+
+        <script>
+
+            $(function(){
+                let codes = "<b>text</b>";
+
+                $("#btn1").on("click",function(){
+                    $("#text").append(codes);
+                });
+
+                $("#btn2").on("click",function(){
+                    $("#text").prepend(codes);
+                });
+
+            });
+        </script>
+    </body>
+</html>
+ -->
+
+<!-- 
+<html>
+    <head>
+        <title>jquery</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <body>
+        <button id="btn1">attr 변경</button>
+        <button id="btn2">attr 확인</button>
+
+        <div id="text">now</div>
+        <a href="" id="link">link</a>
+
+        <script>
+
+            $(function(){
+                
+
+                $("#btn1").on("click",function(){
+                   let url = prompt("주소를 입력해주세요");
+                   console.log(url);
+                   $("#link").attr("href",url);
+                });
+
+                $("#btn2").on("click",function(){
+                    console.log(  $("#link").attr("href"));
+                    $("#link").attr("href");
+                });
+            });
+        </script>
+    </body>
+</html> -->
+
+<!-- 
+<html>
+    <head>
+        <title>jquery</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        #div1{
+            display: inline-block;
+            border: black 1px solid;
+            width: 200px;
+            height: 100px;
+        }
+
+    </style>
+    <body>
+       <div id="div1">1</div>
+
+       <script>
+           $("#div1").css("width","400px");
+
+       </script>
+
+        
+    </body>
+</html> -->
