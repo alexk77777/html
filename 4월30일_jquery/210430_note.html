@@ -1,11 +1,20 @@
-<html>
+<!--
+ javascript vs jquery : id에 #을 붙이냐 안붙이냐   
+ javascript 는 ID 기반
+ jquery는 ID, class 사용가능
+ javascript는 onclick 등을 직접 적용시켜 script에서 실행구문을 한문장으로 만들 수 있는 반면
+ jquery는 경우의 수를 다 만들어야한다
+    
+    
+    
+    <html>
     <head>
         <title>jquery</title>
     </head>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <body>
-        <button id="btn1">html</button>
-        <button id="btn2">text</button>
+        <button id="btn1">123</button>
+        <button id="btn2">abdc</button>
 
         <div id="text"></div>
 
@@ -24,12 +33,12 @@
         </script>
     </body>
 
-</html>
+</html> -->
 
 
-<!-- 
 
-<html>
+
+<!-- <html>
     <head>
         <title>jquery</title>
     </head>
@@ -56,11 +65,11 @@
             });
         </script>
     </body>
-</html>
- -->
+</html> -->
 
-<!-- 
-<html>
+
+
+<!-- <html>
     <head>
         <title>jquery</title>
     </head>
@@ -75,8 +84,6 @@
         <script>
 
             $(function(){
-                
-
                 $("#btn1").on("click",function(){
                    let url = prompt("주소를 입력해주세요");
                    console.log(url);
@@ -92,7 +99,7 @@
     </body>
 </html> -->
 
-<!-- 
+
 <html>
     <head>
         <title>jquery</title>
@@ -112,9 +119,10 @@
 
        <script>
            $("#div1").css("width","400px");
+           document.getElementById("div1").style.height="300px"
 
        </script>
 
         
     </body>
-</html> -->
+</html>

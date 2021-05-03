@@ -1,6 +1,59 @@
-<html>
+<html >
     <head>
         <title>alltime-notebook</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <style>
+            div {
+                display: inline-block;
+            } 
+            #bg {
+                width: 400px;
+                height: 400px;
+                background-color: lightgrey;
+                border: 1px solid black;
+     
+            }
+            #head {
+                width: 400px;
+                height: 40px;
+                background-color: grey;
+            }
+            /* #content {
+                border: 1px solid black;
+            } */
+         
+            .inq {
+                display: inline-block;
+                background-color: white;
+                width: 250px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+            #btn {
+                float: left;
+            }
+        
+        </style>
     </head>
-    
- </html>
+    <body>
+        <div id="bg">
+            <div id="head">기사 등록하기</div>
+            <div id="content">
+                <div id="text"></div>
+            </div>
+        </div>
+        <button id="btn">기사 입력하기</button>
+
+
+        <script>
+            $(function () {
+                $("#btn").on("click", function () {
+                    let input = prompt('글자 입력');
+                    $("#text").append('<div class="inq">' + input + '</div>');
+
+                });
+            });
+        </script>
+    </body>
+
+</html>
