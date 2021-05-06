@@ -1,0 +1,149 @@
+<!-- <html>
+    <head>
+        <title>exercise1</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <style>
+            div{
+            width: 50px;
+            border: 1px solid black;
+        }
+        </style>
+        
+    </head>
+    <body>
+        <div>ID</div>
+        <input type="text"><br />
+
+        <div>PW</div>
+        <input type="text"><br />
+
+        <div>성별</div>
+        <input type="checkbox" name="gender">남자
+        <input type="checkbox" name="gender">여자 <br />
+
+        <div>직업</div>
+        <input type=""><br />
+        
+        <div>취미</div>
+        <div>
+        <input type="checkbox" name="habit">개발
+        <input type="checkbox" name="habit">게임
+        <input type="checkbox" name="habit">낚시<br />
+        <input type="checkbox" name="habit">운동
+        <input type="checkbox" name="habit">독서
+        <input type="checkbox" name="habit">음악감상
+        </div>
+
+        <button id="cancel">취소</button>
+        <button id="granted">회원가입</button>
+        <script>
+            $(function(){
+                let gender_count = $("input:checkbox[name=gender]:checked").length;
+                console.log(gender_count);
+
+                let habit_count = $("input:checkbox[name=habit]:checked").length;
+                console.log(habit_count);
+
+
+
+                $("#granted").on("click", function(){
+                    if(gender_count>=1&&habit>=3){
+                        alert.log("회원가입완료");
+                    }
+            });
+
+
+        </script>
+    </body>
+</html> -->
+
+
+
+<!-- <교수님 버전> -->
+<html>
+    <head>
+        <title>exercise1</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <style>
+            div{
+            width: 50px;
+            border: 1px solid black;
+        }
+        </style>
+        
+    </head>
+    <body>
+
+        <!-- <form> -->
+         ID <input type="text" id="input1" /><br />
+
+        PW
+        <input type="password" id="input2" /><br />
+
+        성별
+        <input type="radio" name="gender" value="male">남자
+        <input type="radio" name="gender" value="female">여자 <br />
+
+        직업
+        <select id="job" name="job">
+            <option value=""></option>
+            <option value="1">프로그래머</option>
+            <option value="2">학생</option>
+            <option value="3">군인</option>
+            </select><br />
+        
+        취미
+        <input type="checkbox" name="hobby">개발
+        <input type="checkbox" name="hobby">게임
+        <input type="checkbox" name="hobby">낚시<br />
+        <input type="checkbox" name="hobby">운동
+        <input type="checkbox" name="hobby">독서
+        <input type="checkbox" name="hobby">음악감상
+        
+
+        <input type="reset" value="초기화">
+        <button>회원가입</button>
+    <!-- </form> -->
+
+        <script>
+            $(function(){
+
+                // let count = 어쩌구 ; 이렇게 먼저 정의해놓으면 이건 바로 시작할때의 count 값이고 아래는 버튼을 눌렀을때의 값이기 때문에 값이 다르다
+
+                var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+                $("button").on("click", function(){
+                    if($("#input1").val().length <5){
+                        alert("아이디를 5자 이상 입력해주세요");
+                        return 0;
+                    }
+                    else if($("#input1").val().match(regExp)==null){
+                        alert("아이디는 이메일 형식입니다");
+                        return 0;
+                    }
+                    else if($("#input2").val().length<5){
+                        alert("패스워드를 5자 이상 입력해주세요");
+                        return 0;
+                    }else if ($("input:radio[name=gender]:checked").length==0){
+                        alert("성별을 입력해주세요");
+                        return 0;
+                    }else if ($("#job").val()==""){
+                        alert("직업을 입력해주세요");
+                        return 0;
+                    }else if ($("input:checkbox[name=hobby]:checked").length<3){
+                        alert("취미를 3개 이상 입력해주세요");
+                        return 0;
+                    }else {
+                        alert("회원가입이 완료되었습니다");
+                    }
+
+                    // console.log($("#input1").val());     
+                    // console.log($("#input2").val());
+                    // console.log($("input:radio[name=gender]:checked").length);
+                    // console.log($("#job").val());
+                    // console.log($("input:checkbox[name=hobby]:checked").length);
+                    });
+            });       
+        </script>
+    </body>
+</html>

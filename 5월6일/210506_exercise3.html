@@ -1,0 +1,100 @@
+<!-- jquery 키보드 이벤트 참조 -->
+
+<html>
+    <head>
+        <title>jquery</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <style></style>
+    </head>
+    <body>
+
+        <!-- <div
+            style="display: inline-block; border: 1px solid black; background-color: green; width: 100%; height: 500px;"> -->
+            <div
+                id="suzy"
+                style="background-image: url('../4월7일~8일/image/1.jpg'); width: 200px; height: 200px;">
+                수지</div>
+        <!-- </div> -->
+        <div>
+            <button id="left">left</button>
+            <button id="right">right</button>
+            <button id="up">up</button>
+            <button id="down">down</button>
+        </div>
+        <script>
+            $(function () {
+
+                $("#left").on("click", function () {
+                    $("#suzy").animate({
+                        left: "+=50px"
+                    }, 500);
+
+                });
+
+                $("#right").on("click", function () {
+                    $("#suzy").animate({
+                        left: "-=50px"
+                    }, 500);
+
+                });
+
+            });
+        </script>
+    </body>
+</html>
+
+
+
+<html>
+    <head>
+        <title>jquery</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <style>
+            #bg{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                border: 1px solid white;
+            }
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            #mario{
+                position: absolute;
+                top:40%;
+                left:40%;
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+
+            }
+        </style>
+    </head>
+    <body>
+<div id="bg">
+    <div id="mario"><img src="" alt=""></div>
+</div>
+
+
+        <script>
+           $(function(){
+               $("#body").keydown(function(e){
+                   if(e.key=="ArrowLeft"){
+                       $("#mario").animate({left:"-=50px"},200);
+                   }
+                   if(e.key=="ArrowRight"){
+                       $("#mario").animate({left:"+=50px"},200);
+                   }
+                   if(e.key=="ArrowUp"){
+                       $("#mario").animate({top:"-=50px"},200);
+                   }
+                   if(e.key=="ArrowDonwn"){
+                       $("#mario").animate({left:"+=50px"},200);
+                   }
+
+               })
+           })
+        </script>
+    </body>
+</html>

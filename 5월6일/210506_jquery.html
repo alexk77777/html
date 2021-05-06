@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+         <!-- <case#1-값 입력 할때>
+        <input type="text" id="test">
+
+        <script>           
+            $(function(){
+                $("#test").val("1234");
+                alert($("#test").val());
+            });
+        </script> -->
+
+        <!-- <case#2-체크박스-선택된 갯수>
+
+        <input type="checkbox" name="mycheck" value="1"><br />
+        <input type="checkbox" name="mycheck" value="2"><br />
+        <input type="checkbox" name="mycheck" value="3"><br />
+        <input type="checkbox" name="mycheck" value="4"><br />
+        <input type="checkbox" name="mycheck" value="5"><br />
+
+        <button>log</button>
+        
+        <script>
+            $(function(){
+                let count = $("input:checkbox[name=mycheck]").length;
+                console.log(count);
+
+                $("button").on("click", function(){
+                    let checkbtn=$("input:checkbox[name=mycheck]:checked").length;
+                    console.log(checkbtn);
+                })
+            });
+        </script> -->
+
+
+        <!-- <case#3-체크박스-전체체크> -->
+        <!-- <input type="checkbox" name="mycheck" value="1"><br />
+        <input type="checkbox" name="mycheck" value="2"><br />
+        <input type="checkbox" name="mycheck" value="3"><br />
+        <input type="checkbox" name="mycheck" value="4"><br />
+        <input type="checkbox" name="mycheck" value="5"><br />
+
+        <button id="btn1">log</button>
+        <button id="btn2">all check</button>
+        <button id="btn3">all no check</button>
+        
+        <script>
+            $(function(){
+                let count = $("input:checkbox[name=mycheck]").length;
+                console.log(count);
+
+                $("#btn1").on("click", function(){
+                    let checkbtn=$("input:checkbox[name=mycheck]:checked").length;
+                    console.log(checkbtn);
+                });
+                $("#btn2").on("click", function(){
+                    $("input:checkbox[name=mycheck]").prop("checked",true);
+                });
+                $("#btn3").on("click", function(){
+                    let checkbtn=$("input:checkbox[name=mycheck]").prop("checked",false);
+                    console.log(checkbtn.length);
+                });
+            });
+        </script> -->
+
+
+ <!-- <case#4-체크박스-체크순회> -->
+
+    <!-- <input type="checkbox" name="mycheck" value="1"><br />
+    <input type="checkbox" name="mycheck" value="2"><br />
+    <input type="checkbox" name="mycheck" value="3"><br />
+    <input type="checkbox" name="mycheck" value="4"><br />
+    <input type="checkbox" name="mycheck" value="5"><br />
+
+    <button id="btn1">log</button>
+    <button id="btn2">all check</button>
+    <button id="btn3">all no check</button>
+
+    
+    <button id="btn4">짝수</button>
+    <button id="btn5">홀수</button>
+    
+    <script>
+        $(function(){
+            let count = $("input:checkbox[name=mycheck]").length;
+            console.log(count);
+
+            $("#btn1").on("click", function(){
+                let checkbtn=$("input:checkbox[name=mycheck]:checked").length;
+                console.log(checkbtn);
+            });
+            $("#btn2").on("click", function(){
+                $("input:checkbox[name=mycheck]").prop("checked",true);
+            });
+            $("#btn3").on("click", function(){
+                let checkbtn=$("input:checkbox[name=mycheck]").prop("checked",false);
+                console.log(checkbtn.length);
+            });
+            $("#btn4").on("click", function(){
+                let count=0;
+                $("input:checkbox[name=mycheck]").each(function(){
+                    if(count%2){
+                        $(this).prop("checked",true);
+                    }
+                    count++;
+                });
+            });
+
+            // 1이 true 0이 false
+
+            $("#btn5").on("click", function(){
+                let count=0;
+                $("input:checkbox[name=mycheck]").each(function(){
+                    if(count%2==0){
+                        $(this).prop("checked",true);
+                    }
+                    count++;
+                });
+            });
+        });
+    </script> -->
+
+
+
+ <!-- <case#5-hide & show> -->
+   
+    <button id="left" style="display: inline-block; background-color: black; top: 200px">gogogo</button>
+    <button id="right">gogogo</button>
+     <div id="test" style="position:absolute; display: inline-block; width: 300px; height: 300px; background-color: brown;"></div>
+    <script>
+        $(function(){
+            // $("#test").hide(1000);
+            // $("#test").show(1000);
+            // $("#test").fadeOut(1000);
+            // $("#test").fadeIn(1000);
+            // $("#test").slideUp(1000);
+            // $("#test").slideDown(1000);
+            // $("#test").slideToggle(1000);
+
+            // $("#test").animate({
+            //     width:"100%"}, 500
+            // );
+            // $("#test").animate({
+            //     width:"10%"}, 500
+            // );
+            // $("#test").animate({
+            //     right:"100px"}, 500
+            // );
+
+
+            $("#left").on("click", function(){
+                $("#test").animate({
+                left:"+=10px"}, 500
+            );
+
+            });
+
+            $("#right").on("click", function(){
+                $("#test").animate({
+                left:"-=10px"}, 500
+            );
+
+            });
+
+
+
+   
+            
+          
+            
+        });
+    </script>
+    </body>
+</html>
