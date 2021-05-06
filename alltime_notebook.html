@@ -1,52 +1,50 @@
-<html >
-    <head>
-        <title>alltime-notebook</title>
-        <style>
-            div {
-                display: inline-block;
-                border: 1px solid black;
-                width: 200px;
-                height: 40px;
-                text-align: center;
-                line-height: 40px;
-
-            }
-            .grey {
-                background-color: grey;
-                color: white;
-            }
-            .white {
-                background-color: white;
-                color: black;
-            }
-        </style>
+<html>
+    <head >
+        <title>jquery</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     </head>
-    <body onload="initial();">
-        <div id="html" onclick="clicker('html');">HTML</div>
-        <div id="css" onclick="clicker('css');">CSS</div>
-        <div id="javascript" onclick="clicker('javascript');">Javascript</div>
+    <body>
+        <button id="left">left</button>
+        <button id="right">right</button>
+        <button id="up">up</button>
+        <button id="down">down</button>
+
+        <div id="mario" style="position: absolute; background-color: green; width: 100px; height: 100px;"></div>
         <script>
 
-            function initial(){
-                document
-                    .getElementById('html')
-                    .className = "grey";
-                document
-                    .getElementById('css')
-                    .className = "grey";
-                document
-                    .getElementById('javascript')
-                    .className = "grey";
-            }
+            // $(function(){
+            //     $("#left").on("click", function(){
+            //         $("#suzy").animate({left:"-=10px"},500);
+            //     });
+            //     $("#right").on("click", function(){
+            //         $("#suzy").animate({left:"+=10px"},500);
+            //     });
+            //     $("#down").on("click", function(){
+            //         $("#suzy").animate({top:"+=10px"},500);
+            //     });
+            //     $("#up").on("click", function(){
+            //         $("#suzy").animate({top:"+=10px"},500);
+            //     });
+            // });
+         
+            $(function(){
+               $("body").keydown(function(e){
+                   if(e.key=="ArrowLeft"){
+                       $("#mario").animate({left:"-=50px"},200);
+                   }
+                   if(e.key=="ArrowRight"){
+                       $("#mario").animate({left:"+=50px"},200);
+                   }
+                   if(e.key=="ArrowUp"){
+                       $("#mario").animate({top:"-=50px"},200);
+                   }
+                   if(e.key=="ArrowDown"){
+                       $("#mario").animate({top:"+=50px"},200);
+                   }
 
-            function clicker(input) {
-               initial();
-                document
-                    .getElementById(input)
-                    .className = "white";
+               })
+           })
 
-            }
         </script>
     </body>
-
 </html>
