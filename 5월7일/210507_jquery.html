@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>gamemake</title>
+</head>
+<body>
+        
+        <script>
+// native javascript
+// #1
+// function test(){
+//     console.log("ok");
+// }
+// setTimeout(test(),2000);
+
+// #2
+// var gogo=1;
+// let timeer = setInterval(function(){
+//     console.lot(gogo);
+// },2000);
+
+// $(function(){
+// });
+
+// #3
+
+var gogo =1;
+let timer = setInterval(function(){
+    gogo=Math.random();
+    console.log(gogo);
+
+    gogo=gogo*1000;
+    gogo=Math.ceil(gogo);
+    console.log(gogo);
+},500);
+
+$(function(){});
+
+        </script>
+    </body>
+</html>
