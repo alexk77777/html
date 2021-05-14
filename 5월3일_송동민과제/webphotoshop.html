@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Web Photoshop</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    </head>
+    <style>
+
+        #bg {
+            border: 1px solid black;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: inline-block;
+            background-image: url("img.jpg");
+            background-size: contain;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        #img_showup {
+            height: 500px;
+            width: 400px;
+            margin-top: 100px;
+            margin-left: 38%;
+            display: inline-block;
+        }
+        input {
+            margin-left: 42%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        #fir_row,
+        #sec_row {
+            align-content: space-between;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+    <body>
+        <div id="bg">
+            <div><img src="" id="img_showup"></div>
+            <div><input type="file" onchange="readURL(this)"></div>
+
+            <div id="fir_row">
+                <button id="gray">회색으로</button>
+                <button id="dim">흐리게</button>
+                <button id="shadow">그림자</button>
+                <button id="transparent">50% 투명</button>
+            </div>
+            <div id="sec_row">
+                <button id="rotateL">좌로 90도 회전</button>
+                <button id="rotateR">우로 90도 회전</button>
+                <button id="reset">이미지 초기화</button>
+            </div>
+        </div>
+
+        <script>
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    // console.log(input.files);     
+                    // console.log(input.files[0]);
+                    var reader = new FileReader;
+                    reader.onload = function (e) {
+                        $('#img_showup').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#fir_row").show();
+                    $("#sec_row").show();
+                }
+            }
+
+            $(document).ready(function () {
+                $("#gray").on("click", function () {
+                    $("#img_showup").css("filter", "grayscale(100%)");
+                });
+                $("#dim").on("click", function () {
+                    $("#img_showup").css("filter", "blur(5px)");
+                });
+                $("#shadow").on("click", function () {
+                    $("#img_showup").css("box-shadow", "8px 8px");
+                });
+                $("#transparent").on("click", function () {
+                    $("#img_showup").css("opacity", "50%");
+                });
+                $("#rotateL").on("click", function () {
+                    $("#img_showup").css("transform", "rotate(-90deg)");
+                });
+                $("#rotateR").on("click", function () {
+                    $("#img_showup").css("transform", "rotate(90deg)");
+                });
+                $("#reset").on("click", function () {
+                    $("#img_showup").css(
+                        {"filter": "", "box-shadow": "", "opacity": "", "transform": ""}
+                    );
+                });
+
+            });
+        </script>
+
+    </body>
+</html>
