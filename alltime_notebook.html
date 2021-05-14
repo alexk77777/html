@@ -1,50 +1,379 @@
-<html>
+<!-- <html>
     <head >
         <title>jquery</title>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     </head>
-    <body>
-        <button id="left">left</button>
-        <button id="right">right</button>
-        <button id="up">up</button>
-        <button id="down">down</button>
+    <style>
+        img {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
 
-        <div id="mario" style="position: absolute; background-color: green; width: 100px; height: 100px;"></div>
+        }
+        div {
+            border: 1px solid black;
+
+        }
+        #mariogif {
+            width: 100px;
+            height: 100px;
+        }
+        .chr {
+            position: absolute;
+        }
+        #bg {
+            width: 100%;
+            height: 90%;
+            border: 1px solid black;
+            position: relative;
+        }
+    </style>
+    <body>
+        <div id="bg">
+            <div class="chr" id="mario"><img id="mariogif" src="5월7일/mario/man.gif"></div>
+            <div class="chr" id="killer"><img src="5월7일/mario/killer.jpeg"></div>
+            <div class="chr" id="gb"><img src="5월7일/mario/gb.gif"></div>
+        </div>
+        마리오 위치 :<span id="mario_gps"></span><br/>
+        굼바 위치 :<span id="gb_gps"></span><br/>
+        킬러 위치 :<span id="killer_gps"></span><br/>
+        점수 :<span id="score"></span>
+
         <script>
 
-            // $(function(){
-            //     $("#left").on("click", function(){
-            //         $("#suzy").animate({left:"-=10px"},500);
-            //     });
-            //     $("#right").on("click", function(){
-            //         $("#suzy").animate({left:"+=10px"},500);
-            //     });
-            //     $("#down").on("click", function(){
-            //         $("#suzy").animate({top:"+=10px"},500);
-            //     });
-            //     $("#up").on("click", function(){
-            //         $("#suzy").animate({top:"+=10px"},500);
-            //     });
-            // });
-         
-            $(function(){
-               $("body").keydown(function(e){
-                   if(e.key=="ArrowLeft"){
-                       $("#mario").animate({left:"-=50px"},200);
-                   }
-                   if(e.key=="ArrowRight"){
-                       $("#mario").animate({left:"+=50px"},200);
-                   }
-                   if(e.key=="ArrowUp"){
-                       $("#mario").animate({top:"-=100px"},200);
-                       $("#mario").animate({top:"+=100px"},200);
-                   }
-                   if(e.key=="ArrowDown"){
-                       $("#mario").animate({top:"+=50px"},200);
-                   }
+            var killer_misilling = 0;
+            var mario_alive = 1;
+            var score = 0;
 
-               })
-           })
+            setInterval(function () {
+
+                $("#mario_gps").text($("#mario").css("bottom"));
+                $("#gb_gps").text($("#gb").css("left"));
+                $("#killer_gps").text($("#killer").css("left"));
+
+                let mario_bottom = parseInt($("#mario").css("bottom"));
+                let gb_left = parseInt($("#gb").css("left"));
+                let killer_left = parseInt($("#killer").css("left"));
+
+                if (gb_left - killer_left < 90 && killer_misilling == 1) {
+                    $("#killer").stop();
+                    $("#killer").hide();
+                    killer_misilling = 0;
+
+                    $("#gb").stop();
+                    $("#gb").hide();
+                    gb_default();
+
+                    scoreplus(200);
+                }
+
+                if (mario_bottom < 60 && gb_left < 80 && gb_left > -50 && mario_alive == 1) {
+                    alert("마리오 사망");
+                    $("#mario").stop();
+                    $("#gb").stop();
+                    mario_alive = 0;
+                } 
+
+            });
+
+            var mario_jumping = 0;
+
+            function mario_default() {
+                $("#mario").show();
+                $("#mario").css({left: "0px", bottom: "00px"});
+
+                $("body").keydown(function (event) { // 마리오 점핑, 중복점핑 방지
+                    if (event.keyCode == 32) {
+                        if (mario_jumping == 0) {
+                            mario_jumping = 1;
+                            $("#mario").animate({
+                                bottom: "200px"
+                            }, 500);
+                            $("#mario").animate({
+                                bottom: "0px"
+                            }, 500, function () {
+                                mario_jumping = 0;
+                            });
+                        }
+                    }
+                });
+            }
+
+            function killer_default() {
+                $("#killer").hide();
+                $("body").keydown(function (event) { //총알 발사, 중복발사 방지
+                    if (event.keyCode == 13) {
+                        if (killer_misilling == 0 && mario_alive == 1) {
+                            killer_misilling = 1;
+                            $("#killer").css({left: "90px", bottom: "0px"});
+                            $("#killer").show();
+                            $("#killer").animate({
+                                left: "100%"
+                            }, 2000, function () {
+                                killer_misilling = 0;
+                            });
+                            // killer_misilling=0;   이거 왜 그런거지? 왜 이렇게는 안되는거지?
+                        }
+                    }
+                })
+            }
+
+            function gb_default() {
+                $("#gb").show();
+                $("#gb").css({right: "0px", bottom: "0px"});
+                $("#gb").animate({
+                    right: "100%"
+                }, 4000, function () {
+                    if (mario_alive == 1) {
+                        scoreplus(100);
+                    }
+                    gb_default();
+                });
+            }
+
+            function hit() {}
+
+            function scoreplus(num) {
+                score = score + num;
+                $("#score").text(score);
+            }
+
+            function startnow() {}
+
+            $(function () {
+
+                // 다 사라져있다 start 누르면 게임시작 $("#mario").hide(); $("#gb").hide(); 스타트 버튼 누르기 구현
+                // startnow();
+                mario_default();
+                killer_default();
+                gb_default();
+                startnow();
+            });
+        </script>
+    </body>
+</html> -->
+
+<!--   
+<html>
+    <head>
+        <title>project</title>
+        <script
+            src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    </head>
+    <style>
+        .page {
+            border: 2px solid blue;
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            background-image: url(img.jpg);
+            background-color: rgb(255, 255, 188);
+            background-size: contain;
+        }
+        #preview {
+            border: 1px dashed black;
+            height: 400px;
+            width: 300px;
+            margin-top: 50px;
+            margin-left: 40%;
+            display: block;
+        }
+        input {
+            margin-left: 42%;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        button {
+            background-color: rgb(247, 247, 165);
+            font-size: 20px;
+            border-radius: 50px;
+        }
+        #box1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #box2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .upperbox {
+            display: none;
+            border: 1px solid blue;
+            width: 150px;
+            height: 70px;
+            margin-left: 15px;
+        }
+        .lowerbox {
+            display: none;
+            border: 1px solid blue;
+            width: 220px;
+            height: 70px;
+            margin-left: 15px;
+        }
+
+
+    </style>
+    <body>
+        
+        <div class="page">
+            <div><img src="" id="preview"></div>
+            <div><input type="file" id="img_select"></div>
+            <div class="box" id="box1">
+                <button class="upperbox" id="btn1">회색으로</button>
+                <button class="upperbox" id="btn2">흐리게</button>
+                <button class="upperbox" id="btn3">그림자</button>
+                <button class="upperbox" id="btn4">50% 투명</button>
+            </div>
+            <div class="box" id="box2">
+                <button class="lowerbox" id="btn5">좌로 90도 회전</button>
+                <button class="lowerbox" id="btn6">우로 90도 회전</button>
+                <button class="lowerbox" id="btn7">이미지 초기화</button>
+            </div>
+        </div>
+
+        <script>
+            $("#img_select").change(function img() {
+                ext = $(this)
+                    .val()
+                    .split(".")
+                    .pop()
+                    .toLowerCase();
+                if ($.inArray(ext, ["gif", "png", "jpg", "jpeg"]) == -1) {
+                    alert("이미지 파일이 아닙니다! (gif, png, jpg, jpeg 만 업로드 가능)");
+                    img();
+                } else {
+                    setImageFromFile(this, "#preview");
+                };
+            });
+            function setImageFromFile(input, expression) {
+
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $(expression).attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    $("#preview").css("border","none")
+                    $(".upperbox").show();
+                    $(".lowerbox").show();
+                };
+            };
+            $(function change(){
+
+                    $("#btn1").on("click",function(){
+                        $("#preview").css("-webkit-filter","grayscale(100%)");
+                    });
+                    $("#btn2").on("click",function(){
+                        $("#preview").css("-webkit-filter","blur(5px)");
+                    });
+                    $("#btn3").on("click",function(){
+                        $("#preview").css("box-shadow","5px 5px 5px 5px");
+                    });
+                    $("#btn4").on("click",function(){
+                        $("#preview").css("opacity","50%");
+                    });
+                    $("#btn5").on("click",function(){
+                        $("#preview").css("transform","rotate(90deg)");
+                    });
+                    $("#btn6").on("click",function(){
+                        $("#preview").css("transform","rotate(270deg)");
+                    });
+                    $("#btn7").on("click",function(){
+                        $("#preview").css({"filter": "","box-shadow": "","opacity": "","transform": ""});
+                    });
+                    
+            });
+
+        </script>
+    </body>
+</html>
+ -->
+
+
+
+
+ <html>
+    <head>
+        <title>web photoshop</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <style>
+            #bg {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                border: 1px black solid;
+                background-image: url(img.jpg);
+                background-size: contain;
+            }
+
+            #preview {
+                border: 1px dashed black;
+                height: 400px;
+                width: 300px;
+                margin-top: 50px;
+                margin-left: 40%;
+                display: block;
+            }
+
+            #fir_row,
+            #sec_row {
+                align-content: space-between;
+                text-align: center;
+                position: absolute;
+                bottom: 30%;
+                left: 30%;
+            }
+            #sec_row {
+                bottom: 20%;
+                left: 34%;
+            }
+            button {
+                width: 150px;
+                height: 50px;
+                margin-left: 20px;
+            }
+            /* #img_box{
+                width: 300px;
+                height: 200px;
+                border: 1px black solid;
+                position: absolute;
+                left: 600px;
+                top: 300px;
+            } */
+        </style>
+    </head>
+
+    <body>
+        <div id="bg">
+            
+            <!-- <div> -->
+                <img src="4월7일~8일/image/1.jpg" id="img_showup">
+            <!-- </div> -->
+            <div id="img_box"><input type="file" id="img_select"></div>
+
+            <div id="fir_row">
+                <button id="gray">회색으로</button>
+                <button id="dim">흐리게</button>
+                <button id="shadow">그림자</button>
+                <button id="transparent">50% 투명</button>
+            </div>
+            <div id="sec_row">
+                <button id="rotateL">좌로 90도 회전</button>
+                <button id="rotateR">우로 90도 회전</button>
+                <button id="reset">이미지 초기화</button>
+            </div>
+        </div>
+        <script type="text/javascript">
+        
+$(function() {
+    var angle=0;
+    $('#rotateR').click(function(){angle+=-90;
+        $('#img_showup').rotate(angle);});
+});
 
         </script>
     </body>
